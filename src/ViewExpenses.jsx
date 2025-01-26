@@ -65,9 +65,11 @@ const ViewExpenses = () => {
 
       <h2>choose your date range:</h2>
       <form
+        // id="dateForm"
         onSubmit={(e) => {
           e.preventDefault();
           displayExpensesByDate(startDate, endDate);
+          //   document.getElementById("dateForm").reset();
         }}
       >
         <label htmlFor="startDate">
@@ -112,3 +114,4 @@ const ViewExpenses = () => {
 };
 
 export default ViewExpenses;
+export { getExpenseCategories };

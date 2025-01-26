@@ -1,6 +1,7 @@
 import { createRoot } from "react-dom/client";
 import AddExpense from "./AddExpense";
 import ViewExpenses from "./ViewExpenses";
+import Chart from "./Chart";
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
       </h1>
       <AddExpense />
       <ViewExpenses />
-      <h2>Expenses Chart</h2>
+      <Chart />
     </div>
   );
 };
