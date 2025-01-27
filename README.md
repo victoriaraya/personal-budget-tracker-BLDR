@@ -71,13 +71,13 @@ After implementing the basic functionality, I began styling the app with Tailwin
 
 ### Clone this repository
 
-Navigate to the project directory and install the required dependencies:
-
-    cd personal-budget-tracker-BLDR
     git clone https://github.com/victoriaraya/personal-budget-tracker-BLDR.git
 
 ### Install dependencies
 
+Navigate to the project directory and install the required dependencies:
+
+    cd personal-budget-tracker-BLDR
     npm install
 
 ### Run the development server:
