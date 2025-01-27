@@ -1,21 +1,38 @@
 import { createRoot } from "react-dom/client";
+import { ExpenseProvider } from "./ExpenseContext";
 import AddExpense from "./AddExpense";
 import ViewExpenses from "./ViewExpenses";
 import Chart from "./Chart";
+import { HiOutlineSparkles } from "react-icons/hi2";
 
 const App = () => {
   return (
-    <div className="p-5">
-      <h1
-        className="text-center text-7xl font-spicy_rice"
-        // style={{ fontFamily: "'Spicy Rice', serif" }}
-      >
-        Personal Budget Tracker
-      </h1>
-      <AddExpense />
-      <ViewExpenses />
-      <Chart />
-    </div>
+    <ExpenseProvider>
+      <div className="p-5 bg-[#FFC2CD] min-h-screen">
+        <h1
+          className="justify-center text-6xl pb-10 text-[#800f2f] flex gap-2 text-center"
+          style={{ fontFamily: "Spicy Rice, serif" }}
+        >
+          <HiOutlineSparkles />
+          Personal Budget Tracker
+          <HiOutlineSparkles />
+        </h1>
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-5 min-h-screen text-[#5B0B22]"
+          style={{ fontFamily: "Sulphur Point, serif" }}
+        >
+          <div className="">
+            <AddExpense />
+          </div>
+          <div className="">
+            <Chart />
+          </div>
+          <div className="sm:col-span-2 align-bottom">
+            <ViewExpenses />
+          </div>
+        </div>
+      </div>
+    </ExpenseProvider>
   );
 };
 
